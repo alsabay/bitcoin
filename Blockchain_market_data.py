@@ -7,11 +7,14 @@ import requests
 import json
 
 
-r = requests.get("https://api.blockchain.info/charts/market-price?timespan=2year&format=json&sampled=false")
+dv = requests.get("https://api.blockchain.info/charts/trade-volume?timespan=2year&format=json&sampled=false")
 
-data = json.loads(r.text)
+#dp = requests.get("https://api.blockchain.info/charts/market-price?timespan=2year&format=json&sampled=false")
 
-print(len(data["values"]))
+data = json.loads(dv.text)
+print(data)
+
+#print(len(data["values"]))
 
 
 
