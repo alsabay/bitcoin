@@ -6,7 +6,7 @@ python3
 
 okcoinMongo.py - pulls bitcoin ticker data from okcoin.com, stores in MongoDB at 5 sec intervals.
 livegraph.py - plots bitcoin ticker data from MongoDB.
-live-sparkgraph.py - runs as an apache spark process. Connects to MongoDB using the Stratio spark-mongodb package hosted at spark.packages.org
+live-sparkgraph.py - Plots bitcoin ticker prices runs as an apache spark process. Connects to MongoDB using the Stratio spark-mongodb package hosted at spark.packages.org
 
 Instructions:
 1. Start MongoD in a terminal
