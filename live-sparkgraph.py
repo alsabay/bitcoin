@@ -50,7 +50,7 @@ plt.subplots_adjust(left=0.09, bottom=0.20, right=0.94, top=0.90, wspace=0.2, hs
 
 def main():
     try:
-        ani = animation.FuncAnimation(fig, animate, interval=1500)
+        ani = animation.FuncAnimation(fig, animate, interval=500)
         plt.show()
     except KeyboardInterrupt:
         print('Terminated Plotting')
