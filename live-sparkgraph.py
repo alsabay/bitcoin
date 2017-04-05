@@ -3,7 +3,6 @@ live graph animation from a bitcoin ticker file
 Author: Al Sabay
 
 """
-import iomongo
 import matplotlib.pyplot as plt
 import numpy as np
 import matplotlib.animation as animation
@@ -17,7 +16,6 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from pyspark.sql import SparkSession
 
 style.use('fivethirtyeight')
-mDB = iomongo.IO_mongo()
 fig = plt.figure()
 ax1 = plt.subplot2grid((1,1), (0,0))
 
@@ -35,7 +33,7 @@ def animate(i):
     # convert unix dates
     for item in dtl:
         xs.append(dt.datetime.fromtimestamp(item))
-    # get prices from rdd    
+    # get prices from rdd
     ys = df.select('price').rdd.flatMap(lambda x: x).collect()
 
     ax1.clear()
@@ -58,4 +56,4 @@ def main():
         print('Terminated Plotting')
 if __name__ == '__main__':
     main()
-        
+
