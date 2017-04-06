@@ -1,5 +1,5 @@
 """
-live graph animation from a bitcoin ticker file Apache Spark Version
+live graph animation from live bitcoin data being fed into MongoDB. Apache Spark Version.
 Author: Al Sabay
 
 """
@@ -38,6 +38,7 @@ def animate(i):
 
     ax1.clear()
     ax1.plot_date(xs, ys,fmt = '-', label = 'Price')
+
     # turn x axis date labels 45 degrees
     for label in ax1.get_xticklabels():
         label.set_rotation(45)
